@@ -1,0 +1,84 @@
+body, html {
+height: 100%;
+min-height: 100%;
+background-color: #161616;
+}
+h1 {
+color: #fff8de;
+background-color: rgba(0,0,0,0.5);
+font-family: 'open_sansextrabold';
+font-size: 40px;
+margin-top: 0;
+padding: 20px 20px 20px 20px;
+}
+.loading {
+background: url(../img/ico_loading.gif);
+background-position: top;
+background-repeat: no-repeat;
+position: absolute;
+top: 45%;
+left: 10%;
+}
+section {
+opacity: 0;
+height: 360px;
+}
+.col-lg-12 {
+padding-top: 160px;
+}
+.loaded section {
+opacity: 1;
+-webkit-transition: opacity 300ms ease-out;
+-moz-transition: opacity 300ms ease-out;
+transition: opacity 300ms ease-out;
+}
+#preload {
+width: 1px;
+height: 1px;
+overflow: hidden;
+position: absolute;
+top: 0;
+left: 0;
+}
+.bg {
+background-size: cover;
+height: 100%;
+width: 100%;
+}
+#slide-1 .bg {
+background-image: url(../img/bg1.jpg);
+}
+#slide-2 .bg {
+background-image: url(../img/bg2.jpg);
+}
+.ir {
+background-color: transparent;
+border: 0;
+overflow: hidden;
+*text-indent: -9999px;
+}
+
+.ir:before {
+content: "";
+display: block;
+width: 0;
+height: 150%;
+}
+
+@media only screen and (min-width: 768px) {
+	body, html {
+	height: auto;
+	}
+	.bg {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	}
+	section {
+	min-width: 768px;
+	height: 600px;
+	}
+}
